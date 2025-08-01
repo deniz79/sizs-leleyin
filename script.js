@@ -73,8 +73,16 @@ function showHomePage() {
 }
 
 // Event listeners
-vanKedileriBtn.addEventListener('click', showVanPage);
-arabaTarihiBtn.addEventListener('click', showCarPage);
+vanKedileriBtn.addEventListener('click', function() {
+    console.log('Van Kedileri button clicked');
+    showVanPage();
+});
+
+arabaTarihiBtn.addEventListener('click', function() {
+    console.log('Araba Tarihi button clicked');
+    showCarPage();
+});
+
 backBtn.addEventListener('click', showHomePage);
 carBackBtn.addEventListener('click', showHomePage);
 

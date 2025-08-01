@@ -64,6 +64,7 @@ body {
     gap: 15px;
     min-width: 200px;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .van-button:hover {
@@ -78,6 +79,7 @@ body {
 .button-text {
     font-size: 1.1rem;
     font-weight: 600;
+    color: white;
 }
 
 .button-icon {
