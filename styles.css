@@ -28,22 +28,18 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     position: relative;
     min-height: 100vh;
-}
-
-.container {
-    text-align: center;
-    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Button Container */
 .button-container {
-    position: absolute;
-    top: 30px;
-    left: 30px;
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    z-index: 1000;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Button Styles */
@@ -51,9 +47,9 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
     border-radius: 50px;
-    padding: 20px 40px;
+    padding: 25px 50px;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -61,7 +57,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    min-width: 200px;
+    min-width: 250px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     outline: none;
@@ -77,7 +73,7 @@ body {
 }
 
 .button-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: white;
     margin: 0;
@@ -85,7 +81,7 @@ body {
 }
 
 .button-icon {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     animation: bounce 2s infinite;
     margin: 0;
     padding: 0;
@@ -121,13 +117,14 @@ body {
 }
 
 .back-button {
-    background: none;
-    border: 2px solid #667eea;
-    color: #667eea;
-    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
     border-radius: 25px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: 500;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -135,20 +132,19 @@ body {
 }
 
 .back-button:hover {
-    background: #667eea;
-    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
 .content {
     padding-top: 80px;
 }
 
-/* Hero Bölümü */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
     text-align: center;
     padding: 4rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     margin-bottom: 3rem;
 }
 
@@ -156,16 +152,15 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
     font-size: 1.3rem;
-    font-weight: 300;
     opacity: 0.9;
+    font-weight: 300;
 }
 
-/* Bölüm Stilleri */
 section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -173,9 +168,9 @@ section {
 }
 
 section h2 {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
-    text-align: center;
     margin-bottom: 3rem;
     color: #333;
     position: relative;
@@ -187,17 +182,16 @@ section h2::after {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
+    width: 80px;
+    height: 4px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 2px;
 }
 
-/* Intro Bölümü */
 .intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
     margin-bottom: 4rem;
 }
@@ -219,8 +213,8 @@ section h2::after {
 
 .hero-img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
+    max-width: 500px;
+    border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -229,7 +223,6 @@ section h2::after {
     transform: scale(1.05);
 }
 
-/* Timeline Stilleri */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -242,7 +235,7 @@ section h2::after {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: 4px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     transform: translateX(-50%);
 }
@@ -265,13 +258,14 @@ section h2::after {
 .timeline-date {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     border-radius: 25px;
     font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     min-width: 120px;
     text-align: center;
-    position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .timeline-content {
@@ -281,13 +275,14 @@ section h2::after {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin: 0 2rem;
     flex: 1;
-    position: relative;
+    max-width: 400px;
 }
 
 .timeline-content h3 {
-    color: #667eea;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    color: #333;
 }
 
 .timeline-content p {
@@ -295,7 +290,6 @@ section h2::after {
     line-height: 1.6;
 }
 
-/* Özellikler Grid */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -306,11 +300,10 @@ section h2::after {
 .feature-card {
     background: white;
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
 }
 
 .feature-card:hover {
@@ -324,9 +317,10 @@ section h2::after {
 }
 
 .feature-card h3 {
-    color: #667eea;
+    font-size: 1.3rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    color: #333;
 }
 
 .feature-card p {
@@ -334,34 +328,30 @@ section h2::after {
     line-height: 1.6;
 }
 
-/* Galeri */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .gallery-item {
     position: relative;
-    overflow: hidden;
     border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
-    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -377,17 +367,16 @@ section h2::after {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
     padding: 20px 15px 15px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 15px 15px;
     font-weight: 600;
     font-size: 0.9rem;
     text-align: center;
 }
 
-/* Koruma Bölümü */
 .conservation-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
     margin-top: 3rem;
 }
@@ -402,10 +391,10 @@ section h2::after {
 .conservation-image img {
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Tasarım */
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -413,7 +402,7 @@ section h2::after {
     
     .intro {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 2rem;
     }
     
     .timeline::before {
@@ -432,12 +421,12 @@ section h2::after {
     
     .timeline-content {
         margin: 0;
-        width: 100%;
+        max-width: none;
     }
     
     .conservation-content {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 2rem;
     }
     
     .features-grid {
@@ -463,19 +452,14 @@ section h2::after {
     }
     
     .button-container {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin: 20px;
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
     
-    .van-button,
-    .car-button {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
+    .van-button {
+        min-width: 200px;
+        padding: 20px 30px;
+        font-size: 1.1rem;
     }
     
     .button-text {
@@ -483,11 +467,11 @@ section h2::after {
     }
     
     .button-icon {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 
-/* Animasyonlar */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
