@@ -35,6 +35,17 @@ body {
     padding: 2rem;
 }
 
+/* Button Container */
+.button-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
 .van-button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
@@ -46,15 +57,11 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-    position: absolute;
-    top: 30px;
-    left: 30px;
     overflow: hidden;
     display: flex;
     align-items: center;
     gap: 15px;
     min-width: 200px;
-    z-index: 1000;
 }
 
 .van-button:hover {
@@ -63,6 +70,33 @@ body {
 }
 
 .van-button:active {
+    transform: translateY(-2px);
+}
+
+.car-button {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    border: none;
+    border-radius: 50px;
+    padding: 20px 40px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 200px;
+}
+
+.car-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+}
+
+.car-button:active {
     transform: translateY(-2px);
 }
 
@@ -344,13 +378,28 @@ section h2::after {
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px 15px 15px;
+    border-radius: 0 0 10px 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 /* Koruma Bölümü */
@@ -432,12 +481,20 @@ section h2::after {
         font-size: 2rem;
     }
     
-    .van-button {
-        padding: 15px 30px;
-        font-size: 1rem;
-        top: 20px;
-        left: 20px;
-        min-width: 180px;
+    .button-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .van-button,
+    .car-button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
     
     .button-text {
@@ -445,7 +502,7 @@ section h2::after {
     }
     
     .button-icon {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 

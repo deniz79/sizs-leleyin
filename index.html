@@ -10,10 +10,16 @@
 <body>
     <!-- Ana Sayfa -->
     <div id="homePage" class="page active">
-        <button id="vanKedileriBtn" class="van-button">
-            <span class="button-text">Van Kedileri</span>
-            <div class="button-icon">🐱</div>
-        </button>
+        <div class="button-container">
+            <button id="vanKedileriBtn" class="van-button">
+                <span class="button-text">Van Kedileri</span>
+                <div class="button-icon">🐱</div>
+            </button>
+            <button id="arabaTarihiBtn" class="car-button">
+                <span class="button-text">Araba Tarihi</span>
+                <div class="button-icon">🚗</div>
+            </button>
+        </div>
     </div>
 
     <!-- Van Kedileri Sayfası -->
@@ -117,6 +123,158 @@
                     </div>
                     <div class="conservation-image">
                         <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Koruma Çalışmaları">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Araba Tarihi Sayfası -->
+    <div id="carPage" class="page">
+        <nav class="navbar">
+            <button id="carBackBtn" class="back-button">
+                <span>←</span> Ana Sayfa
+            </button>
+        </nav>
+
+        <div class="content">
+            <header class="hero">
+                <h1>Araba Tarihi</h1>
+                <p class="subtitle">Geçmişten Günümüze Otomobil Serüveni</p>
+            </header>
+
+            <section class="intro">
+                <div class="intro-content">
+                    <h2>Otomobil Nedir?</h2>
+                    <p>Otomobil, insanlık tarihinin en önemli icatlarından biridir. 19. yüzyılın sonlarında ortaya çıkan bu teknoloji, toplumları, ekonomileri ve yaşam tarzlarını köklü bir şekilde değiştirmiştir.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Klasik Araba" class="hero-img">
+                </div>
+            </section>
+
+            <section class="history">
+                <h2>Otomobil Tarihi</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1769</div>
+                        <div class="timeline-content">
+                            <h3>İlk Buharlı Araç</h3>
+                            <p>Nicolas-Joseph Cugnot, ilk kendinden tahrikli araç olan "Fardier à vapeur"i icat etti. Bu buharlı araç, saatte 4 km hızla hareket edebiliyordu.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1885</div>
+                        <div class="timeline-content">
+                            <h3>Benz Patent Motorwagen</h3>
+                            <p>Karl Benz, ilk gerçek otomobil olan "Patent Motorwagen"i üretti. Bu araç, içten yanmalı benzin motoru kullanıyordu ve modern otomobillerin atası sayılır.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1908</div>
+                        <div class="timeline-content">
+                            <h3>Ford Model T</h3>
+                            <p>Henry Ford'un Model T'si, seri üretim teknikleriyle üretilen ilk otomobil oldu. Bu sayede otomobil, orta sınıfın da ulaşabileceği bir ürün haline geldi.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1920'ler</div>
+                        <div class="timeline-content">
+                            <h3>Altın Çağ</h3>
+                            <p>1920'ler, otomobil tasarımının altın çağı oldu. Rolls-Royce, Bugatti, Duesenberg gibi lüks markalar, sanat eseri niteliğinde otomobiller üretti.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1950'ler</div>
+                        <div class="timeline-content">
+                            <h3>Modern Tasarım</h3>
+                            <p>1950'lerde otomobil tasarımı tamamen değişti. Aerodinamik çizgiler, krom detaylar ve güçlü motorlar öne çıktı. Chevrolet Corvette, Ford Thunderbird gibi ikonik modeller doğdu.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1970'ler</div>
+                        <div class="timeline-content">
+                            <h3>Enerji Krizi</h3>
+                            <p>1970'lerdeki petrol krizi, otomobil endüstrisini değiştirdi. Yakıt tasarrufu ön plana çıktı ve küçük, ekonomik otomobiller popüler hale geldi.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1990'lar</div>
+                        <div class="timeline-content">
+                            <h3>Teknoloji Devrimi</h3>
+                            <p>1990'larda elektronik sistemler otomobillere girdi. ABS, hava yastıkları, navigasyon sistemleri standart hale geldi.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2000'ler</div>
+                        <div class="timeline-content">
+                            <h3>Hibrit ve Elektrik</h3>
+                            <p>2000'lerde çevre bilinci artınca, hibrit ve elektrikli otomobiller geliştirildi. Toyota Prius, Tesla gibi markalar öncü oldu.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020'ler</div>
+                        <div class="timeline-content">
+                            <h3>Otonom Araçlar</h3>
+                            <p>Günümüzde yapay zeka ve sensör teknolojileri sayesinde otonom (sürücüsüz) araçlar geliştiriliyor. Gelecekte otomobil kullanımı tamamen değişecek.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="characteristics">
+                <h2>Önemli Gelişmeler</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Motor Teknolojisi</h3>
+                        <p>Buharlı motorlardan elektrikli motorlara, otomobil motorları sürekli gelişti. Günümüzde hibrit ve tamamen elektrikli sistemler yaygınlaşıyor.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Tasarım Evrimi</h3>
+                        <p>Otomobil tasarımı, fonksiyonellik ve estetiği birleştirerek sürekli değişti. Her dönemin kendine özgü tasarım dili var.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Güvenlik Teknolojileri</h3>
+                        <p>Emniyet kemeri, hava yastığı, ABS gibi güvenlik sistemleri, otomobil kullanımını çok daha güvenli hale getirdi.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3>Çevre Dostu</h3>
+                        <p>Günümüzde otomobiller, çevre kirliliğini azaltmak için temiz enerji kaynakları kullanıyor ve emisyon değerleri sürekli düşürülüyor.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <h2>İkonik Otomobiller</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop" alt="Klasik Araba">
+                        <div class="gallery-caption">Klasik Dönem</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop" alt="Modern Spor Araba">
+                        <div class="gallery-caption">Modern Spor</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1582639510494-c80b5de9f148?w=800&h=600&fit=crop" alt="Elektrikli Araba">
+                        <div class="gallery-caption">Elektrikli Gelecek</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="conservation">
+                <h2>Gelecekte Otomobil</h2>
+                <div class="conservation-content">
+                    <div class="conservation-text">
+                        <p>Gelecekte otomobiller, yapay zeka teknolojileri ile tamamen otonom hale gelecek. Sürücüsüz araçlar, trafik kazalarını minimize edecek ve ulaşımı daha verimli hale getirecek.</p>
+                        <p>Elektrikli ve hidrojen yakıtlı araçlar, fosil yakıt bağımlılığını ortadan kaldıracak. Aynı zamanda, paylaşımlı araç sistemleri, bireysel araç sahipliğini azaltacak ve daha sürdürülebilir bir ulaşım sistemi oluşturacak.</p>
+                    </div>
+                    <div class="conservation-image">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Gelecekte Otomobil">
                     </div>
                 </div>
             </section>

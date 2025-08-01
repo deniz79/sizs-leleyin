@@ -1,8 +1,11 @@
 // DOM elementlerini seç
 const homePage = document.getElementById('homePage');
 const vanPage = document.getElementById('vanPage');
+const carPage = document.getElementById('carPage');
 const vanKedileriBtn = document.getElementById('vanKedileriBtn');
+const arabaTarihiBtn = document.getElementById('arabaTarihiBtn');
 const backBtn = document.getElementById('backBtn');
+const carBackBtn = document.getElementById('carBackBtn');
 
 // Sayfa geçiş fonksiyonları
 function showVanPage() {
@@ -26,8 +29,30 @@ function showVanPage() {
     }, 100);
 }
 
+function showCarPage() {
+    homePage.classList.remove('active');
+    carPage.classList.add('active');
+    
+    // Smooth scroll to top
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    
+    // Animasyonlu geçiş efekti
+    carPage.style.opacity = '0';
+    carPage.style.transform = 'translateY(20px)';
+    
+    setTimeout(() => {
+        carPage.style.transition = 'all 0.5s ease';
+        carPage.style.opacity = '1';
+        carPage.style.transform = 'translateY(0)';
+    }, 100);
+}
+
 function showHomePage() {
     vanPage.classList.remove('active');
+    carPage.classList.remove('active');
     homePage.classList.add('active');
     
     // Smooth scroll to top
@@ -49,7 +74,9 @@ function showHomePage() {
 
 // Event listeners
 vanKedileriBtn.addEventListener('click', showVanPage);
+arabaTarihiBtn.addEventListener('click', showCarPage);
 backBtn.addEventListener('click', showHomePage);
+carBackBtn.addEventListener('click', showHomePage);
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -111,6 +138,14 @@ vanKedileriBtn.addEventListener('mouseleave', () => {
     vanKedileriBtn.style.transform = 'translateY(0) scale(1)';
 });
 
+arabaTarihiBtn.addEventListener('mouseenter', () => {
+    arabaTarihiBtn.style.transform = 'translateY(-2px) scale(1.05)';
+});
+
+arabaTarihiBtn.addEventListener('mouseleave', () => {
+    arabaTarihiBtn.style.transform = 'translateY(0) scale(1)';
+});
+
 // Gallery image click effect
 document.querySelectorAll('.gallery-item img').forEach(img => {
     img.addEventListener('click', function() {
@@ -159,7 +194,7 @@ window.addEventListener('load', () => {
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        if (vanPage.classList.contains('active')) {
+        if (vanPage.classList.contains('active') || carPage.classList.contains('active')) {
             showHomePage();
         }
     }
@@ -183,11 +218,11 @@ function handleSwipe() {
     const diff = touchStartX - touchEndX;
     
     if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0 && vanPage.classList.contains('active')) {
+        if (diff > 0 && (vanPage.classList.contains('active') || carPage.classList.contains('active'))) {
             // Swipe left - go back to home
             showHomePage();
         } else if (diff < 0 && homePage.classList.contains('active')) {
-            // Swipe right - go to van page
+            // Swipe right - go to van page (default)
             showVanPage();
         }
     }
