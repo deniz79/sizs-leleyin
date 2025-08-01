@@ -44,9 +44,9 @@ body {
     flex-direction: row;
     gap: 20px;
     z-index: 1000;
-    align-items: center;
 }
 
+/* Button Styles */
 .van-button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
@@ -58,13 +58,13 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-    overflow: hidden;
     display: flex;
     align-items: center;
     gap: 15px;
     min-width: 200px;
-    text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
 }
 
 .van-button:hover {
@@ -80,11 +80,15 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .button-icon {
     font-size: 1.5rem;
     animation: bounce 2s infinite;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes bounce {

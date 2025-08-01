@@ -1,90 +1,107 @@
 // DOM elementlerini seç
-const homePage = document.getElementById('homePage');
-const vanPage = document.getElementById('vanPage');
-const carPage = document.getElementById('carPage');
-const vanKedileriBtn = document.getElementById('vanKedileriBtn');
-const arabaTarihiBtn = document.getElementById('arabaTarihiBtn');
-const backBtn = document.getElementById('backBtn');
-const carBackBtn = document.getElementById('carBackBtn');
+document.addEventListener('DOMContentLoaded', function() {
+    const homePage = document.getElementById('homePage');
+    const vanPage = document.getElementById('vanPage');
+    const carPage = document.getElementById('carPage');
+    const vanKedileriBtn = document.getElementById('vanKedileriBtn');
+    const arabaTarihiBtn = document.getElementById('arabaTarihiBtn');
+    const backBtn = document.getElementById('backBtn');
+    const carBackBtn = document.getElementById('carBackBtn');
 
-// Sayfa geçiş fonksiyonları
-function showVanPage() {
-    homePage.classList.remove('active');
-    vanPage.classList.add('active');
-    
-    // Smooth scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-    
-    // Animasyonlu geçiş efekti
-    vanPage.style.opacity = '0';
-    vanPage.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        vanPage.style.transition = 'all 0.5s ease';
-        vanPage.style.opacity = '1';
-        vanPage.style.transform = 'translateY(0)';
-    }, 100);
-}
+    // Debug: Button'ların bulunup bulunmadığını kontrol et
+    console.log('Van Kedileri Button:', vanKedileriBtn);
+    console.log('Araba Tarihi Button:', arabaTarihiBtn);
 
-function showCarPage() {
-    homePage.classList.remove('active');
-    carPage.classList.add('active');
-    
-    // Smooth scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-    
-    // Animasyonlu geçiş efekti
-    carPage.style.opacity = '0';
-    carPage.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        carPage.style.transition = 'all 0.5s ease';
-        carPage.style.opacity = '1';
-        carPage.style.transform = 'translateY(0)';
-    }, 100);
-}
+    // Sayfa geçiş fonksiyonları
+    function showVanPage() {
+        console.log('showVanPage called');
+        homePage.classList.remove('active');
+        vanPage.classList.add('active');
+        
+        // Smooth scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Animasyonlu geçiş efekti
+        vanPage.style.opacity = '0';
+        vanPage.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            vanPage.style.transition = 'all 0.5s ease';
+            vanPage.style.opacity = '1';
+            vanPage.style.transform = 'translateY(0)';
+        }, 100);
+    }
 
-function showHomePage() {
-    vanPage.classList.remove('active');
-    carPage.classList.remove('active');
-    homePage.classList.add('active');
-    
-    // Smooth scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-    
-    // Animasyonlu geçiş efekti
-    homePage.style.opacity = '0';
-    homePage.style.transform = 'scale(0.95)';
-    
-    setTimeout(() => {
-        homePage.style.transition = 'all 0.5s ease';
-        homePage.style.opacity = '1';
-        homePage.style.transform = 'scale(1)';
-    }, 100);
-}
+    function showCarPage() {
+        console.log('showCarPage called');
+        homePage.classList.remove('active');
+        carPage.classList.add('active');
+        
+        // Smooth scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Animasyonlu geçiş efekti
+        carPage.style.opacity = '0';
+        carPage.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            carPage.style.transition = 'all 0.5s ease';
+            carPage.style.opacity = '1';
+            carPage.style.transform = 'translateY(0)';
+        }, 100);
+    }
 
-// Event listeners
-vanKedileriBtn.addEventListener('click', function() {
-    console.log('Van Kedileri button clicked');
-    showVanPage();
+    function showHomePage() {
+        vanPage.classList.remove('active');
+        carPage.classList.remove('active');
+        homePage.classList.add('active');
+        
+        // Smooth scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Animasyonlu geçiş efekti
+        homePage.style.opacity = '0';
+        homePage.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+            homePage.style.transition = 'all 0.5s ease';
+            homePage.style.opacity = '1';
+            homePage.style.transform = 'scale(1)';
+        }, 100);
+    }
+
+    // Event listeners
+    if (vanKedileriBtn) {
+        vanKedileriBtn.addEventListener('click', function() {
+            console.log('Van Kedileri button clicked');
+            showVanPage();
+        });
+    }
+
+    if (arabaTarihiBtn) {
+        arabaTarihiBtn.addEventListener('click', function() {
+            console.log('Araba Tarihi button clicked');
+            showCarPage();
+        });
+    }
+
+    if (backBtn) {
+        backBtn.addEventListener('click', showHomePage);
+    }
+
+    if (carBackBtn) {
+        carBackBtn.addEventListener('click', showHomePage);
+    }
 });
-
-arabaTarihiBtn.addEventListener('click', function() {
-    console.log('Araba Tarihi button clicked');
-    showCarPage();
-});
-
-backBtn.addEventListener('click', showHomePage);
-carBackBtn.addEventListener('click', showHomePage);
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
