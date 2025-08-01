@@ -44,6 +44,7 @@ body {
     flex-direction: row;
     gap: 20px;
     z-index: 1000;
+    align-items: center;
 }
 
 .van-button {
@@ -62,6 +63,7 @@ body {
     align-items: center;
     gap: 15px;
     min-width: 200px;
+    text-decoration: none;
 }
 
 .van-button:hover {
@@ -89,6 +91,7 @@ body {
     align-items: center;
     gap: 15px;
     min-width: 200px;
+    text-decoration: none;
 }
 
 .car-button:hover {
